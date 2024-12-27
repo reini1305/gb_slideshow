@@ -1,0 +1,40 @@
+[
+    {
+        "background": "scenery",
+        "texts": [
+            {
+                "x": 6,
+                "y": 17,
+                "animated": false,
+                "text": "This is a test",
+                "color": "dkgrey",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "xt",
+        "texts": [
+            {
+                "x": 7,
+                "y": 4,
+                "animated": true,
+                "text": "Hello",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 7,
+                "y": 5,
+                "animated": true,
+                "text": "World",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "fesch",
+        "texts": [ ]
+    }
+]
