@@ -41,3 +41,8 @@ Pixel art originally by RodrixAP under Creative Commons Attribution 2.0 Generic 
 
 https://www.flickr.com/photos/rodrixap/10591266994/in/album-72157637154901153/
 
+TODOs:
+-
+- blank screen (press start?)
+- blank screen at the end
+- sprites for overlays?

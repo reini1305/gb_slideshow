@@ -12,7 +12,8 @@ uint8_t buttons, buttons_prev;
 #define UPDATE_BUTTONS()            (buttons_prev = buttons, buttons = joypad())
 #define BUTTON_TOGGLED(BUTTON_MASK) ((buttons & (~buttons_prev)) & (BUTTON_MASK))
 #define BUTTON_PRESSED(BUTTON_MASK) (buttons & (BUTTON_MASK))
-uint8_t current_slide_id = 0;
+extern uint8_t current_slide_id;
+extern uint8_t checksum;
 int8_t current_text_id = 0;
 
 
@@ -40,7 +41,7 @@ void draw_text(void) {
         uint8_t y = curr_text->y;
         while(*c) {
             gotogxy(x, y);
-            gprintf("%c",*c);
+            gprintf("%c", *c);
             c++;
             x++;
             if (x==20) {
@@ -75,7 +76,7 @@ void load_next_text(void) {
 void load_previous_text(void) {
     if (current_text_id > 0) {
         show_image();
-        uint8_t i = current_text_id;
+        int8_t i = current_text_id;
         for(current_text_id=0; current_text_id<i; current_text_id++){
             draw_text();
         }
@@ -97,6 +98,12 @@ void load_previous_text(void) {
 
 void main(void)
 {
+    ENABLE_RAM;
+    SWITCH_RAM(0);
+    if (checksum != 42) {
+        current_slide_id=0;
+        checksum = 42;
+    }
     show_image();
     draw_text();
     SHOW_BKG;

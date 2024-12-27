@@ -63,7 +63,9 @@ $(SRCDIR)/images.h: $(RESDIR)/slides.json
 
 # Compile .c files in "src/" to .o object files
 $(OBJDIR)/%.o:	$(SRCDIR)/%.c
-	$(LCC) $(LCCFLAGS) -c -o $@ $<
+	$(eval BOFLAG = $(shell echo "$<" | sed -n 's/.*\.bo\([0-9]\+\).*/\-Wf-bo\1/p'))
+	$(eval BAFLAG = $(shell echo "$<" | sed -n 's/.*\.ba\([0-9]\+\).*/\-Wf-ba\1/p'))
+	$(LCC) $(LCCFLAGS) $(BOFLAG) $(BAFLAG) -c -o $@ $<
 
 # Compile .c files in "res/" to .o object files
 $(OBJDIR)/%.o:	$(RESDIR)/%.c
