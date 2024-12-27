@@ -13,7 +13,7 @@ uint8_t buttons, buttons_prev;
 #define BUTTON_TOGGLED(BUTTON_MASK) ((buttons & (~buttons_prev)) & (BUTTON_MASK))
 #define BUTTON_PRESSED(BUTTON_MASK) (buttons & (BUTTON_MASK))
 uint8_t current_slide_id = 0;
-uint8_t current_text_id = 0;
+int8_t current_text_id = 0;
 
 
 void show_image(void){
@@ -44,7 +44,7 @@ void draw_text(void) {
             c++;
             x++;
             if (x==20) {
-                x=0;
+                x=curr_text->x;
                 y++;
             }
             vsync();
@@ -90,6 +90,9 @@ void load_previous_text(void) {
         }
     }
     current_text_id--;
+    if (current_text_id < 0) {
+        current_text_id = 0;
+    }
 }
 
 void main(void)
