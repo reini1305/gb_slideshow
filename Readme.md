@@ -35,7 +35,7 @@ Slides can be defined as a json, referencing the images as background. Text can 
     }
 ~~~
 
-Pressing the A or B button goes to the next/previous text/slide.
+Pressing the A or B button goes to the next/previous text/slide. START to return to first slide.
 
 Pixel art originally by RodrixAP under Creative Commons Attribution 2.0 Generic (CC BY 2.0)
 

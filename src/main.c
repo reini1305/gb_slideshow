@@ -4,7 +4,7 @@
 
 #include "slides.h"
 
-
+#define REMEMBER_SLIDE  // Comment if you want to start slideshow from beginning
 #define CGB_BKG_PAL_0 0u
 #define CGB_ONE_PAL   1u
 
@@ -100,10 +100,14 @@ void main(void)
 {
     ENABLE_RAM;
     SWITCH_RAM(0);
-    if (checksum != 42) {
+#ifdef REMEMBER_SLIDE
+    if (checksum != NUM_SLIDES) {
         current_slide_id=0;
-        checksum = 42;
+        checksum = NUM_SLIDES;
     }
+#else
+    current_slide_id = 0;
+#endif
     show_image();
     draw_text();
     SHOW_BKG;
@@ -119,6 +123,12 @@ void main(void)
         }
         if (BUTTON_TOGGLED(J_B)){
             load_previous_text();
+        }
+        if (BUTTON_TOGGLED(J_START)){
+            current_slide_id = 0;
+            current_text_id = 0;
+            show_image();
+            draw_text();
         }
         vsync();
     }
