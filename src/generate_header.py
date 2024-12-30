@@ -27,11 +27,15 @@ with open('res/slides.json') as f:
     slides = json.load(f)
 
 slides_h = []
-
+constants_h = []
+constants_h.append('#pragma once\n')
+slides_h.append('#pragma once\n')
 slides_h.append('#include "images.h"\n')
 slides_h.append('#include "types.h"\n')
 slides_h.append('#include <gb/drawing.h>\n')
-slides_h.append(f'#define NUM_SLIDES {len(slides)}\n')
+constants_h.append(f'#define NUM_SLIDES {len(slides)}\n')
+max_text_length = max(len(s["texts"]) for s in slides)
+constants_h.append(f'#define MAX_TEXTS {max_text_length}\n')
 for s_id, slide in enumerate(slides):
     slides_h.append(f'const slide slide_{s_id} = {{\n')
     slides_h.append(f'    .background_id={images.index(slide["background"])},\n')
@@ -51,3 +55,6 @@ slides_h.append('};\n')
 
 with open('src/slides.h', 'w') as f:
     f.writelines(slides_h)
+
+with open('src/constants.h', 'w') as f:
+    f.writelines(constants_h)

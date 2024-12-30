@@ -92,6 +92,7 @@ clean:
 	rm -f  $(RESOBJSRC)/*.*
 	rm $(SRCDIR)/images.h
 	rm $(SRCDIR)/slides.h
+	rm $(SRCDIR)/constants.h
 
 # create necessary directories after Makefile is parsed but before build
 # info prevents the command from being pasted into the makefile

@@ -1,5 +1,5 @@
 #pragma once
-
+#include "constants.h"
 typedef struct Text {
     uint8_t x;
     uint8_t y;
@@ -11,6 +11,6 @@ typedef struct Text {
 
 typedef struct Slide {
     uint8_t background_id;
-    const text texts[10];
+    const text texts[MAX_TEXTS];
     int8_t num_texts;
 } slide;
