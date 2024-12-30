@@ -11,6 +11,6 @@ typedef struct Text {
 
 typedef struct Slide {
     uint8_t background_id;
-    const text* texts;
-    uint8_t num_texts;
+    const text texts[10];
+    int8_t num_texts;
 } slide;

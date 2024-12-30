@@ -28,14 +28,14 @@ void show_image(void){
     SWITCH_ROM(current_bank);
 }
 
-void draw_text(void) {
+void draw_text(BOOLEAN ignore_animated) {
     const slide* curr_slide = slides[current_slide_id];
     if (curr_slide->num_texts == 0) {
         return;
     }
     const text* curr_text = &curr_slide->texts[current_text_id];
     color(curr_text->color, curr_text->back, OR);
-    if (curr_text->animated) {
+    if (curr_text->animated && !ignore_animated) {
         char* c = curr_text->t;
         uint8_t x = curr_text->x;
         uint8_t y = curr_text->y;
@@ -61,7 +61,7 @@ void draw_text(void) {
 void load_next_text(void) {
     if (current_text_id < slides[current_slide_id]->num_texts - 1) {
         current_text_id++;
-        draw_text();
+        draw_text(FALSE);
     } else {
         if (current_slide_id == NUM_SLIDES - 1) {
             return;
@@ -69,7 +69,7 @@ void load_next_text(void) {
         current_text_id = 0;
         current_slide_id++;
         show_image();
-        draw_text();
+        draw_text(FALSE);
     }
 }
 
@@ -78,7 +78,7 @@ void load_previous_text(void) {
         show_image();
         int8_t i = current_text_id;
         for(current_text_id=0; current_text_id<i; current_text_id++){
-            draw_text();
+            draw_text(TRUE);
         }
     } else {
         if (current_slide_id == 0) {
@@ -87,7 +87,7 @@ void load_previous_text(void) {
         current_slide_id--;
         show_image();
         for(current_text_id=0; current_text_id<slides[current_slide_id]->num_texts; current_text_id++){
-            draw_text();
+            draw_text(TRUE);
         }
     }
     current_text_id--;
@@ -109,7 +109,7 @@ void main(void)
     current_slide_id = 0;
 #endif
     show_image();
-    draw_text();
+    draw_text(FALSE);
     SHOW_BKG;
 
     vsync();
@@ -118,17 +118,17 @@ void main(void)
     }
     while(1) {
         UPDATE_BUTTONS();
-        if (BUTTON_TOGGLED(J_A)){
+        if (BUTTON_TOGGLED(J_A | J_RIGHT)){
             load_next_text();
         }
-        if (BUTTON_TOGGLED(J_B)){
+        if (BUTTON_TOGGLED(J_B | J_LEFT)){
             load_previous_text();
         }
         if (BUTTON_TOGGLED(J_START)){
             current_slide_id = 0;
             current_text_id = 0;
             show_image();
-            draw_text();
+            draw_text(FALSE);
         }
         vsync();
     }

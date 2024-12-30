@@ -33,14 +33,14 @@ slides_h.append('#include "types.h"\n')
 slides_h.append('#include <gb/drawing.h>\n')
 slides_h.append(f'#define NUM_SLIDES {len(slides)}\n')
 for s_id, slide in enumerate(slides):
-    for t_id, text in enumerate(slide["texts"]):
-        slides_h.append(f'const text text_{s_id}_{t_id} = {{{text["x"]}, {text["y"]}, "{text["text"]}", {text["color"].upper()}, {text["back"].upper()}, {"TRUE" if text["animated"] else "FALSE"} }};\n')
     slides_h.append(f'const slide slide_{s_id} = {{\n')
     slides_h.append(f'    .background_id={images.index(slide["background"])},\n')
     if slide["texts"]:
+        if len(slide["texts"]) > 10:
+            raise IndexError
         slides_h.append(f'    .texts={{\n')
         for t_id, text in enumerate(slide["texts"]):
-            slides_h.append(f'        &text_{s_id}_{t_id},\n')
+            slides_h.append(f'        {{{text["x"]}, {text["y"]}, "{text["text"]}", {text["color"].upper()}, {text["back"].upper()}, {"TRUE" if text["animated"] else "FALSE"} }},\n')
         slides_h.append('    },\n')
     slides_h.append(f'    .num_texts={len(slide["texts"])}\n')
     slides_h.append('};\n')
