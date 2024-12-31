@@ -7,6 +7,7 @@
 #define REMEMBER_SLIDE  // Comment if you want to start slideshow from beginning
 #define CGB_BKG_PAL_0 0u
 #define CGB_ONE_PAL   1u
+const palette_color_t cgb_pal_black[] = {RGB_BLACK, RGB_BLACK, RGB_BLACK, RGB_BLACK};
 
 uint8_t buttons, buttons_prev;
 #define UPDATE_BUTTONS()            (buttons_prev = buttons, buttons = joypad())
@@ -15,6 +16,7 @@ uint8_t buttons, buttons_prev;
 extern uint8_t current_slide_id;
 extern uint8_t checksum;
 int8_t current_text_id = 0;
+BOOLEAN blacked = FALSE;
 
 
 void show_image(void){
@@ -121,14 +123,31 @@ void main(void)
         if (BUTTON_TOGGLED(J_A | J_RIGHT)){
             load_next_text();
         }
-        if (BUTTON_TOGGLED(J_B | J_LEFT)){
+        else if (BUTTON_TOGGLED(J_B | J_LEFT)){
             load_previous_text();
         }
-        if (BUTTON_TOGGLED(J_START)){
+        else if (BUTTON_TOGGLED(J_START)){
             current_slide_id = 0;
             current_text_id = 0;
             show_image();
             draw_text(FALSE);
+        }
+        else if (BUTTON_TOGGLED(J_SELECT)){
+            if (blacked) {
+                blacked = FALSE;
+                if (_cpu == CGB_TYPE) {
+                    set_bkg_palette(BKGF_CGB_PAL0, CGB_ONE_PAL, palettes[slides[current_slide_id]->background_id]);
+                } else {
+                    BGP_REG = DMG_PALETTE(DMG_WHITE, DMG_LITE_GRAY, DMG_DARK_GRAY, DMG_BLACK);
+                }
+            } else {
+                blacked = TRUE;
+                if (_cpu == CGB_TYPE) {
+                    set_bkg_palette(BKGF_CGB_PAL0, CGB_ONE_PAL, cgb_pal_black);
+                } else {
+                    BGP_REG = DMG_PALETTE(DMG_BLACK, DMG_BLACK, DMG_BLACK, DMG_BLACK);
+                }
+            }
         }
         vsync();
     }

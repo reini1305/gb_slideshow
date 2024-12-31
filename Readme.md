@@ -1,5 +1,5 @@
 
-### Create Slide Shows as a Gameboy ROM
+# Create Slide Shows as a Gameboy ROM
 
 Images placed in the res/ folder will be automatically converted into C code and compiled into the viewer.
 
@@ -34,15 +34,16 @@ Slides can be defined as a json, referencing the images as background. Text can 
         "texts": [ ]
     }
 ~~~
+## Key Bindings
+- A/Right: next text/slide
+- B/Left: previous text/slide
+- Start: go to first slide
+- Select: toggle black screen
 
-Pressing the A or B button goes to the next/previous text/slide. START to return to first slide.
-
+## Acknowledgements
 Pixel art originally by RodrixAP under Creative Commons Attribution 2.0 Generic (CC BY 2.0)
 
 https://www.flickr.com/photos/rodrixap/10591266994/in/album-72157637154901153/
 
-TODOs:
--
-- blank screen (press start?)
-- blank screen at the end
-- sprites for overlays?
+## TODOs:
+- sprites for typing effect?
