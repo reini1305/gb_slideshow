@@ -20,8 +20,8 @@ BOOLEAN blacked = FALSE;
 
 
 void show_image(void){
-    uint8_t image_id = slides[current_slide_id]->background_id;
-    uint8_t current_bank = CURRENT_BANK;
+    const uint8_t image_id = slides[current_slide_id]->background_id;
+    const uint8_t current_bank = CURRENT_BANK;
     SWITCH_ROM(image_id / 2 + 1);
     draw_image(images[image_id]);
     if (_cpu == CGB_TYPE) {
@@ -136,7 +136,11 @@ void main(void)
             if (blacked) {
                 blacked = FALSE;
                 if (_cpu == CGB_TYPE) {
-                    set_bkg_palette(BKGF_CGB_PAL0, CGB_ONE_PAL, palettes[slides[current_slide_id]->background_id]);
+                    const uint8_t image_id = slides[current_slide_id]->background_id;
+                    const uint8_t current_bank = CURRENT_BANK;
+                    SWITCH_ROM(image_id / 2 + 1);
+                    set_bkg_palette(BKGF_CGB_PAL0, CGB_ONE_PAL, palettes[image_id]);
+                    SWITCH_ROM(current_bank);
                 } else {
                     BGP_REG = DMG_PALETTE(DMG_WHITE, DMG_LITE_GRAY, DMG_DARK_GRAY, DMG_BLACK);
                 }
