@@ -241,12 +241,109 @@
         "background": "template",
         "texts": [
             {
-                "x": 1,
-                "y": 7,
+                "x": 0,
+                "y": 6,
                 "animated": true,
-                "text": "Hardware Modifications",
+                "text": "Getting images off  the camera",
                 "color": "black",
                 "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 3,
+                "y": 7,
+                "animated": true,
+                "text": "Hardware Mods",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "camera_plus",
+        "texts": [
+            {
+                "x": 0,
+                "y": 15,
+                "animated": false,
+                "text": "C/CS mount (Camera+)",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "animated": false,
+                "text": "@2BitToy",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "refocus",
+        "texts": [
+            {
+                "x": 0,
+                "y": 13,
+                "animated": false,
+                "text": "Refocus original    lens",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 0,
+                "y": 15,
+                "animated": false,
+                "text": "Chris (@gameboycamera)",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "ef_mount",
+        "texts": [
+            {
+                "x": 0,
+                "y": 15,
+                "animated": false,
+                "text": "EF/Pentax mount",
+                "color": "white",
+                "back": "dkgrey"
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "animated": false,
+                "text": "@Herr_Zatacke",
+                "color": "white",
+                "back": "dkgrey"
+            }
+        ]
+    },
+    {
+        "background": "d_mount",
+        "texts": [
+            {
+                "x": 0,
+                "y": 16,
+                "animated": false,
+                "text": "D mount",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 0,
+                "y": 17,
+                "animated": false,
+                "text": "@W33dWiz420",
+                "color": "white",
+                "back": "black"
             }
         ]
     },
