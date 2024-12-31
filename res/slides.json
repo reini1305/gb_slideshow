@@ -21,8 +21,144 @@
         ]
     },
     {
+        "background": "interceptor",
+        "texts": [
+            {
+                "x": 0,
+                "y": 1,
+                "animated": true,
+                "text": "GB Interceptor",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 0,
+                "y": 15,
+                "animated": true,
+                "text": "github.com/Staacks/gbinterceptor",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 0,
+                "y": 1,
+                "animated": false,
+                "text": "Presentation on a GB",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 1,
+                "y": 4,
+                "animated": false,
+                "text": "-PNGs as 160x144px, 2bpp",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 6,
+                "animated": false,
+                "text": "-Slides/text JSON",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 7,
+                "animated": false,
+                "text": "-Python script -> C",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 8,
+                "animated": false,
+                "text": "-Compiled to GB ROM with GBDK2020",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 10,
+                "animated": false,
+                "text": "-Flash to cartridge",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 11,
+                "animated": false,
+                "text": "-Profit!",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
         "background": "selfie",
-        "texts": []
+        "texts": [
+            {
+                "x": 0,
+                "y": 0,
+                "animated": false,
+                "text": "It's me!",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 0,
+                "y": 16,
+                "animated": false,
+                "text": "github.com/reini1305",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 0,
+                "y": 1,
+                "animated": false,
+                "text": "The Gameboy Camera",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 1,
+                "y": 4,
+                "animated": false,
+                "text": "-introduced in 1998",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 5,
+                "animated": false,
+                "text": "-red, green, yellow, atomic purple (in Japan), blue (US/EU)",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 8,
+                "animated": false,
+                "text": "-first digital camera marketed to kids",
+                "color": "black",
+                "back": "white"
+            }
+        ]
     },
     {
         "background": "template",
@@ -79,7 +215,7 @@
                 "x": 1,
                 "y": 9,
                 "animated": false,
-                "text": "-image transfer via GB printer",
+                "text": "-image transfer via serial",
                 "color": "black",
                 "back": "white"
             },
@@ -88,6 +224,66 @@
                 "y": 1,
                 "animated": true,
                 "text": "Why noone's using it",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 0,
+                "y": 1,
+                "animated": false,
+                "text": "Challenges          ",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 1,
+                "y": 7,
+                "animated": true,
+                "text": "Hardware Modifications",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 5,
+                "y": 7,
+                "animated": true,
+                "text": "Custom ROMs",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "pixlr",
+        "texts": [
+            {
+                "x": 0,
+                "y": 15,
+                "animated": true,
+                "text": "github.com/HerrZatacke/2bit-pxlr-studio",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "photo",
+        "texts": [
+            {
+                "x": 0,
+                "y": 15,
+                "animated": true,
+                "text": "github.com/untoxa/gb-photo",
                 "color": "white",
                 "back": "black"
             }
@@ -133,45 +329,6 @@
     {
         "background": "hdr_6",
         "texts": []
-    },
-    {
-        "background": "template",
-        "texts": [
-            {
-                "x": 5,
-                "y": 7,
-                "animated": true,
-                "text": "Custom ROMs",
-                "color": "black",
-                "back": "white"
-            }
-        ]
-    },
-    {
-        "background": "pixlr",
-        "texts": [
-            {
-                "x": 0,
-                "y": 15,
-                "animated": true,
-                "text": "github.com/HerrZatacke/2bit-pxlr-studio",
-                "color": "white",
-                "back": "black"
-            }
-        ]
-    },
-    {
-        "background": "photo",
-        "texts": [
-            {
-                "x": 0,
-                "y": 15,
-                "animated": true,
-                "text": "github.com/untoxa/gb-photo",
-                "color": "white",
-                "back": "black"
-            }
-        ]
     },
     {
         "background": "template",
