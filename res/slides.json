@@ -1,44 +1,284 @@
 [
     {
-        "background": "scenery",
+        "background": "title",
         "texts": [
             {
-                "x": 6,
-                "y": 17,
+                "x": 0,
+                "y": 1,
                 "animated": false,
-                "text": "This is a test",
-                "color": "dkgrey",
+                "text": "",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 13,
+                "y": 8,
+                "animated": true,
+                "text": "in 2025",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "selfie",
+        "texts": []
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 0,
+                "y": 1,
+                "animated": false,
+                "text": "Specifications",
+                "color": "white",
+                "back": "black"
+            },
+            {
+                "x": 1,
+                "y": 4,
+                "animated": false,
+                "text": "-128x112px, 2bpp",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 5,
+                "animated": false,
+                "text": "-fixed focus",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 6,
+                "animated": false,
+                "text": "-plastic lens",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 7,
+                "animated": false,
+                "text": "-30 images storage",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 8,
+                "animated": false,
+                "text": "-assisted auto",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 1,
+                "y": 9,
+                "animated": false,
+                "text": "-image transfer via GB printer",
+                "color": "black",
+                "back": "white"
+            },
+            {
+                "x": 0,
+                "y": 1,
+                "animated": true,
+                "text": "Why noone's using it",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 1,
+                "y": 7,
+                "animated": true,
+                "text": "High dynamic range",
+                "color": "black",
                 "back": "white"
             }
         ]
     },
     {
-        "background": "xt",
-        "texts": [ ]
+        "background": "hdr_0",
+        "texts": []
     },
     {
-        "background": "xt",
+        "background": "hdr_1",
+        "texts": []
+    },
+    {
+        "background": "hdr_2",
+        "texts": []
+    },
+    {
+        "background": "hdr_3",
+        "texts": []
+    },
+    {
+        "background": "hdr_4",
+        "texts": []
+    },
+    {
+        "background": "hdr_5",
+        "texts": []
+    },
+    {
+        "background": "hdr_6",
+        "texts": []
+    },
+    {
+        "background": "template",
         "texts": [
             {
-                "x": 7,
-                "y": 4,
+                "x": 5,
+                "y": 7,
                 "animated": true,
-                "text": "Hello",
-                "color": "white",
-                "back": "black"
-            },
+                "text": "Custom ROMs",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "pixlr",
+        "texts": [
             {
-                "x": 7,
-                "y": 5,
+                "x": 0,
+                "y": 15,
                 "animated": true,
-                "text": "World",
+                "text": "github.com/HerrZatacke/2bit-pxlr-studio",
                 "color": "white",
                 "back": "black"
             }
         ]
     },
     {
-        "background": "fesch",
-        "texts": [ ]
+        "background": "photo",
+        "texts": [
+            {
+                "x": 0,
+                "y": 15,
+                "animated": true,
+                "text": "github.com/untoxa/gb-photo",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "template",
+        "texts": [
+            {
+                "x": 3,
+                "y": 7,
+                "animated": true,
+                "text": "Tips & Tricks",
+                "color": "black",
+                "back": "white"
+            }
+        ]
+    },
+    {
+        "background": "light_bad",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Light from behind",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "light_good",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Light from front",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "tree_close",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Centered object",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "tree_wide",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Wide shot",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "coffee",
+        "texts": []
+    },
+    {
+        "background": "maroni",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Pets!",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "ice",
+        "texts": [
+            {
+                "x": 2,
+                "y": 16,
+                "animated": true,
+                "text": "Logos / graffiti",
+                "color": "white",
+                "back": "black"
+            }
+        ]
+    },
+    {
+        "background": "black",
+        "texts": [
+            {
+                "x": 0,
+                "y": 0,
+                "animated": false,
+                "text": "Click to exit       presentation...",
+                "color": "black",
+                "back": "white"
+            }
+        ]
     }
 ]
